@@ -7,6 +7,7 @@ import loadingScreen from "./screens/loadingScreen";
 import listChatScreen from "./screens/listChatScreen";
 import firebase from "firebase";
 import {FirebaseConfig} from "./config";
+import chatScreen from "./screens/chatScreen";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(FirebaseConfig);
@@ -22,7 +23,7 @@ export default class App extends React.Component{
 const switchNavigator = createSwitchNavigator({
   loginScreen: {screen: loginScreen},
   loadingScreen: {screen: loadingScreen},
-  
+  chatScreen:{screen: chatScreen},
   listChatScreen: {screen: listChatScreen},
 });
 

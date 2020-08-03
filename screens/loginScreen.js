@@ -81,7 +81,7 @@ class loginScreen extends Component {
       if (result.type === "success") {
         this.onSignIn(result);
         console.log("Success!", result.user.email);
-        this.props.navigation.navigate("listChatScreen", {
+        this.props.navigation.navigate("chatScreen", {
           email: result.user.email,
         });
         return result.accessToken;
